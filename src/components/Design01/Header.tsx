@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
       <nav className="nav">
-        <a className="logo" href="#">
+        <a className="logo" href="/">
           <Logo />
         </a>
 
@@ -31,11 +31,11 @@ export default function Header() {
                 <span><Arrow /></span>
               </a>
               <ul className="nav-sub-links">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">Our Process</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/">About Us</a></li>
+                <li><a href="/">Our Services</a></li>
+                <li><a href="/">Our Process</a></li>
+                <li><a href="/">Our Team</a></li>
+                <li><a href="/">Contact</a></li>
               </ul>
             </li>
 
@@ -45,12 +45,12 @@ export default function Header() {
                 <span><Arrow /></span>
               </a>
               <ul className="nav-sub-links">
-                <li><a href="#">Pearl Suite</a></li>
-                <li><a href="#">Harlech Suite</a></li>
-                <li><a href="#">Foundry Room</a></li>
-                <li><a href="#">Murrayfield Room</a></li>
-                <li><a href="#">Pods</a></li>
-                <li><a href="#">Pods</a></li>
+                <li><a href="/">Pearl Suite</a></li>
+                <li><a href="/">Harlech Suite</a></li>
+                <li><a href="/">Foundry Room</a></li>
+                <li><a href="/">Murrayfield Room</a></li>
+                <li><a href="/">Pods</a></li>
+                <li><a href="/">Pods</a></li>
               </ul>
             </li>
 
@@ -59,7 +59,7 @@ export default function Header() {
             </li>
           </ul>
           
-          {/* <a href="#">
+          {/* <a href="/">
             <button className="alt">Call 029 2082 7550</button>
           </a> */}
 

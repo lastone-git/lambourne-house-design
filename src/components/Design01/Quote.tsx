@@ -30,7 +30,7 @@ export default function Quote () {
                     appearAt={0.3}
                     appearBy={0.3}
                 >
-                    <a className="link" href="#">More about us &rarr;</a>
+                    <a className="link" href="#more">More about us &rarr;</a>
                 </ScrollMotion>
             </div>
         </div>
