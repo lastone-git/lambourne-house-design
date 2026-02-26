@@ -1,44 +1,65 @@
 .design-01 {
   .hero {
     position: relative;
-  
+
     /* mobile-friendly viewport height */
     min-height: 100svh;
     min-height: 100dvh;
     height: 100vh;
-  
+
     .parallax-wrap {
       position: relative;
       height: 100%;
-  
-      /* this is required so the absolute media has a containing block */
+
+      /* required so absolute media has containing block */
       &-wrap {
         position: relative;
         height: 100%;
         overflow: hidden;
       }
-  
+
       &-media {
         position: absolute;
         inset: 0;
         will-change: transform;
       }
     }
-  
-    /* ensure the background is applied */
+
+    /* parallax container (NO background image here anymore) */
     .parallax-media {
       height: 100%;
-      background-image: var(--hero-bg-url);
+      transform: translateZ(0) scale(1.03);
+    }
+
+    /* ============================= */
+    /* Swipe background system       */
+    /* ============================= */
+
+    .hero-swipe {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+
       transform: translateZ(0) scale(1.03);
-  
+
       @media (min-width: 800px) {
         background-position: center;
       }
     }
-  
+
+    /* ============================= */
+    /* Content overlay               */
+    /* ============================= */
+
     .hero-content {
       position: absolute;
       z-index: 9;
@@ -46,18 +67,21 @@
       right: 0;
       bottom: 0;
       top: auto;
-  
+
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       width: calc(100% - 4em);
       max-width: 100%;
       height: auto;
+
       margin: 2em;
       padding: 1.25rem;
+
       background: rgb(11 59 46 / 80%);
       color: #fff;
-  
+
       @media (min-width: 1024px) {
         top: 0;
         bottom: auto;
@@ -67,104 +91,104 @@
         width: 50%;
         height: calc(100% - 4em);
       }
-  
+
       &-container {
         display: flex;
         flex-direction: column;
         gap: 10px;
-  
+
         .eyebrow {
           text-transform: uppercase;
-          letter-spacing: .22em;
+          letter-spacing: 0.22em;
           font-size: 12px;
           color: #fff;
         }
-  
+
         h1 {
           font-weight: 900;
           font-style: italic;
           text-transform: uppercase;
-  
+
           font-size: 28px;
           line-height: 1.05;
-  
+
           @media (min-width: 800px) {
             font-size: 40px;
           }
         }
-  
+
         .lede {
           max-width: 100%;
           font-weight: 300;
           color: #fff;
-  
+
           font-size: 16px;
           line-height: 1.5;
-  
+
           @media (min-width: 800px) {
             font-size: 22px;
             line-height: 40px;
             font-weight: 100;
           }
         }
-  
+
         .cta-row {
           display: flex;
           gap: 12px;
           margin-top: 16px;
           flex-direction: column;
-  
+
           @media (min-width: 520px) {
             flex-direction: row;
             flex-wrap: wrap;
           }
-  
+
           .btn {
             width: 100%;
-  
+
             @media (min-width: 520px) {
               width: auto;
             }
-  
+
             .primary,
             .ghost {
               display: inline-flex;
               justify-content: center;
               align-items: center;
               width: 100%;
-  
-              padding: .7rem 1rem;
+
+              padding: 0.7rem 1rem;
               border-radius: 999px;
               font-weight: 600;
               text-decoration: none;
-  
+
               @media (min-width: 520px) {
                 width: auto;
               }
             }
-  
+
             .primary {
               background: #fff;
               color: green;
             }
-  
+
             .ghost {
               border: 1px solid #fff;
               color: #eaeaea;
             }
           }
         }
-  
+
         .mouse-scroll {
           display: flex;
           flex-direction: row;
           justify-content: center;
           align-items: center;
           gap: 10px;
-  
+
           .scroll-icon {
             width: 90px;
-  
+
             @media (min-width: 800px) {
               width: 150px;
             }
