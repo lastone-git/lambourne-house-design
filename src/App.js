@@ -1,6 +1,5 @@
 import Design01 from "./pages/Design01.tsx";
 import Design02 from "./pages/Design02.tsx";
-import logo from './logo.svg';
 import './App.scss';
 import Tabs from "./components/Tabs/Tabs.tsx";
 import Tab from "./components/Tabs/Tab.tsx";
