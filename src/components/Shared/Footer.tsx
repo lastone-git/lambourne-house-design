@@ -7,7 +7,7 @@ export default function Footer () {
         <footer className="site-footer">
             <div className="site-footer-container">
                 <div className="footer-inner">
-                    <a className="logo" href="#">
+                    <a className="logo" href="/">
                         <Logo />
                     </a>
                     <div className="footer-cols">
