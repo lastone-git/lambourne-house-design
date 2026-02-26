@@ -1,0 +1,190 @@
+.design-02 {
+  .hero {
+    position: relative;
+  
+    /* mobile-friendly viewport height */
+    min-height: 100svh;
+    min-height: 100dvh;
+    height: 100vh;
+  
+    .parallax-wrap {
+      position: relative;
+      height: 100%;
+  
+      /* this is required so the absolute media has a containing block */
+      &-wrap {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+      }
+  
+      &-media {
+        position: absolute;
+        inset: 0;
+        will-change: transform;
+      }
+    }
+  
+    /* ensure the background is applied */
+    .parallax-media {
+      height: 100%;
+      background-image: var(--hero-bg-url);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: translateZ(0) scale(1.03);
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+  
+      @media (min-width: 800px) {
+        background-position: center;
+      }
+    }
+  
+    .hero-content {
+      position: absolute;
+      z-index: 9;
+      top: auto;
+      left: 0;
+      right: 0;
+      bottom: 0;
+  
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: calc(100% - 4em);
+      max-width: 100%;
+      height: auto;
+      margin: 2em;
+      // padding: 1.25rem;
+      color: #fff;
+  
+      @media (min-width: 1024px) {
+        top: 0;
+        bottom: auto;
+        left: auto;
+        right: 0;
+        max-width: 800px;
+        // width: 50%;
+        height: calc(100% - 4em);
+      }
+  
+      &-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+  
+        .eyebrow {
+          text-transform: uppercase;
+          letter-spacing: .22em;
+          font-size: 12px;
+          color: #fff;
+        }
+  
+        h1 {
+          font-family: 'Nunito', sans-serif!important;
+          font-style: normal!important;
+          font-size: 65px!important;
+          font-weight: 100;
+          text-transform: uppercase;
+          line-height: 1;
+          color: #ffffff;
+          text-shadow: 2px 2px #575757;
+  
+          // @media (min-width: 800px) {
+          //   font-size: 40px;
+          // }
+        }
+  
+        .lede {
+          max-width: 100%;
+          font-weight: 300;
+          color: #fff;
+          text-shadow: 1px 1px #575757;
+  
+          font-size: 16px;
+          line-height: 1.5;
+  
+          @media (min-width: 800px) {
+            font-size: 22px;
+            line-height: 40px;
+            font-weight: 100;
+          }
+        }
+  
+        .cta-row {
+          display: flex;
+          gap: 12px;
+          margin-top: 16px;
+          flex-direction: column;
+  
+          @media (min-width: 520px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+          }
+  
+          .btn {
+            width: 100%;
+  
+            @media (min-width: 520px) {
+              width: auto;
+            }
+  
+            .primary,
+            .ghost {
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+  
+              padding: .7rem 1rem;
+              border-radius: 999px;
+              font-weight: 600;
+              text-decoration: none;
+  
+              @media (min-width: 520px) {
+                width: auto;
+              }
+            }
+  
+            .primary {
+              background: #fff;
+              color: green;
+            }
+  
+            .ghost {
+              border: 1px solid #fff;
+              color: #eaeaea;
+            }
+          }
+        }
+  
+        .mouse-scroll {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+  
+          .scroll-icon {
+            width: 90px;
+  
+            @media (min-width: 800px) {
+              width: 150px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

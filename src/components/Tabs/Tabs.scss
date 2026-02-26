@@ -1,0 +1,54 @@
+.tabs {
+  .tab-headers {
+    display: flex;
+    // display: none;
+    gap: 1px;
+    position: fixed;
+    z-index: 9999;
+    transition: transform 0.3s ease;
+
+    .tab-buttons {
+      display: flex;
+      gap: 1px;
+    }
+
+    button {
+      padding: 8px 16px;
+      border-top: none;
+      border-radius: 0 0 5px 5px;
+      background: #b5b5b5;
+      color: #333;
+      cursor: pointer;
+      font-weight: 500;
+
+      &.active {
+        border: none;
+        background: #fff;
+      }
+    }
+
+    .tabs-toggle {
+      padding: 8px 12px;
+      border-top: none;
+      border-radius: 0 0 5px 5px;
+      background: #333;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 500;
+      margin-left: 4px;
+      min-width: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &.tabs-collapsed {
+    .tab-headers {
+      transform: translateX(calc(-100% + 32px));
+    }
+  }
+
+  .tab-body {
+  }
+}

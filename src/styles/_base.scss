@@ -1,0 +1,66 @@
+* { box-sizing: border-box; }
+::selection {
+  background: #A1D07A;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #fff; // or your previous background
+  color: var(--ink);
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, "Noto Sans";
+  line-height: 1.4;
+}
+
+header {
+  z-index: 2;
+}
+
+main {
+  z-index: 1;
+}
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+  border-radius: var(--radius);
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  padding: 1em;
+  background: var(--orange);
+  color: #fff;
+
+  &.alt {
+    background: none;
+    border: 1px solid #fff;
+  }
+
+  &.basic {
+    border: none;
+    padding: 0;
+    font: inherit;
+    outline: inherit;
+    background: none;
+    color: #fff;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-family: "Nunito", sans-serif;
+}
+
+/* helpful text utilities */
+.h2 { font-size: 28px; letter-spacing: 0.02em; margin: 0 0 24px; color: var(--ink); }
+.eyebrow { text-transform: uppercase; letter-spacing: .22em; font-size: 12px; color: var(--muted); }
+.lede { color: var(--ink-dim); max-width: 70ch; }

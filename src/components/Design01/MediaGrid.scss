@@ -1,0 +1,118 @@
+.media-grid {
+  position: relative;
+
+  .background-image {
+    width: 65%;
+    max-width: 520px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    opacity: .35;
+
+    @media (min-width: 800px) {
+      width: 60%;
+      max-width: none;
+      opacity: 1;
+    }
+  }
+
+  .media-grid-container {
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    position: relative;
+    padding-top: 2em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    > * {
+      display: flex;
+      width: 100%;
+    }
+
+    /* desktop layout */
+    @media (min-width: 800px) {
+      width: 90%;
+      flex-direction: row;
+      gap: 20px;
+      padding-top: 4em;
+      padding-left: 0;
+      padding-right: 0;
+
+      > :nth-child(1) {
+        width: 30%;
+        margin-top: 6em;
+
+        img {
+          height: 400px;
+        }
+      }
+
+      > :nth-child(2) {
+        width: 40%;
+      }
+
+      > :nth-child(3) {
+        width: 30%;
+        margin-top: 8em;
+      }
+    }
+
+    .media-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+
+      @media (min-width: 800px) {
+        gap: 20px;
+      }
+    }
+
+    .media-item {
+      width: 100%;
+
+      img,
+      video,
+      iframe {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      /* make mobile media sizes sane */
+      img {
+        height: 240px;
+      }
+
+      video {
+        height: 320px;
+      }
+
+      @media (min-width: 520px) {
+        img {
+          height: 320px;
+        }
+
+        video {
+          height: 420px;
+        }
+      }
+
+      @media (min-width: 800px) {
+        img {
+          height: auto;
+        }
+
+        video {
+          height: 600px;
+        }
+      }
+    }
+  }
+}
