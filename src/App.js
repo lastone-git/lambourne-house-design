@@ -7,7 +7,6 @@ import Tab from "./components/Tabs/Tab.tsx";
 function App() {
   return (
     <div className="App">
-      
       <Tabs>
         <Tab label="Design 1">
           <Design01 />

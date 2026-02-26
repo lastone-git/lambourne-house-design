@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ReactComponent as Logo } from "../../icons/lambourne_house_logo.svg";
 import { ReactComponent as Arrow } from "../../icons/arrow-down.svg";
+import "./Header.scss";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -63,7 +64,7 @@ export default function Header() {
             <button className="alt">Call 029 2082 7550</button>
           </a> */}
 
-          <a  href="https://new-directions.officernd.com/public/calendar/meeting_room">
+          <a className="book-btn" href="https://new-directions.officernd.com/public/calendar/meeting_room">
             <button>Book a meeting room</button>
           </a>
         </div>
