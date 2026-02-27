@@ -94,7 +94,7 @@ export default function Hero({
                 animate="center"
                 exit="exit"
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                style={{ backgroundImage: `url(${images[index]})` }}
+                style={{ backgroundImage: `url(${images[index]})`, backgroundPosition: index === 1 ? "left center" : "" }}
               />
             </AnimatePresence>
           </div>
