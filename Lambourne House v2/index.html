@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lambourne House v2</title>
   <link rel="stylesheet" href="./css/homepage.css">
+  <script src="./js/homepage.js" defer></script>
 </head>
 <body>
-  <div class="lh-page">
-    <!-- site-header -->
-    <header class="lh-site-header">
+  <div class="lh-homepage">
+    <header class="lh-site-header" data-lh-sticky-header>
       <div class="lh-site-header__inner">
         <a class="lh-site-header__logo" href="./index.html">
           <img src="./images/branding/lambourne-house-logo.svg" alt="Lambourne House">
@@ -47,76 +47,89 @@
       </div>
     </header>
 
-    <main>
-      <!-- hero -->
-      <section class="lh-hero">
-        <div class="lh-hero__content">
-          <p class="lh-hero__eyebrow">Spaces That Work for You</p>
-          <h1>A Collaborative space<br>for the Everyday</h1>
-          <p class="lh-hero__lede">Host events, run meetings, or grow your business in adaptable,<br>fully equipped spaces backed by dedicated support.<br><br><strong>Contact us now at 029 2082 7550</strong></p>
+    <main class="lh-homepage__main">
+      <section class="lh-hero" data-lh-hero-section>
+        <div class="lh-hero__viewport">
+          <div class="lh-hero__media" data-lh-parallax data-move-px="-220">
+            <div class="lh-hero__slides" data-lh-hero data-slide-ms="10000">
+              <div class="lh-hero__slide is-active" data-lh-slide style="background-image:url('./images/heros/00.webp');"></div>
+              <div class="lh-hero__slide is-next" data-lh-slide style="background-image:url('./images/heros/10.webp');"></div>
+            </div>
 
-          <div class="lh-hero__scroll">
-            <span>Scroll for more</span>
-            <span class="lh-hero__scroll-indicator" aria-hidden="true"></span>
+            <div class="lh-hero__content">
+              <div class="lh-hero__content-inner">
+                <p class="lh-hero__eyebrow">Spaces That Work for You</p>
+                <h1>A Collaborative space<br>for the Everyday</h1>
+                <p class="lh-hero__lede">Host events, run meetings, or grow your business in adaptable,<br>fully equipped spaces backed by dedicated support.<br><br><strong>Contact us now at 029 2082 7550</strong></p>
+                <div class="lh-hero__scroll">
+                  <span>Scroll for more</span>
+                  <span class="lh-hero__scroll-indicator" aria-hidden="true"></span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- welcome -->
       <section class="lh-welcome" id="about">
         <img class="lh-welcome__background" src="./images/bgs/plant-04-small.webp" alt="">
-
         <div class="lh-welcome__inner">
-          <div class="lh-welcome__line--small">
+          <div class="lh-motion-line lh-welcome__line--small" data-scroll-motion="1" data-x-start="0" data-x-end="0" data-y-start="6.5" data-y-end="0" data-appear-at="0" data-appear-by="0.25" data-animate-opacity="1" data-disable-below="800" data-start-vh="0.85" data-end-vh="0.35">
             <h2>Welcome to Lambourne House</h2>
           </div>
-          <div class="lh-welcome__line--large">
+          <div class="lh-motion-line lh-welcome__line--large" data-scroll-motion="1" data-x-start="-10" data-x-end="0" data-y-start="0" data-y-end="0" data-appear-at="0.2" data-appear-by="0.5" data-animate-opacity="1" data-disable-below="800" data-start-vh="0.85" data-end-vh="0.35">
             <h2>Rooms &amp; Spaces For Hire</h2>
           </div>
-          <div class="lh-welcome__line--meta">
+          <div class="lh-motion-line lh-welcome__line--meta" data-scroll-motion="1" data-x-start="0" data-x-end="0" data-y-start="5.5" data-y-end="0" data-appear-at="0.3" data-appear-by="0.2" data-animate-opacity="1" data-disable-below="800" data-start-vh="0.85" data-end-vh="0.35">
             <h2>- Available Now -</h2>
           </div>
         </div>
       </section>
 
-      <!-- media-grid -->
       <section class="lh-media-grid" id="spaces">
         <img class="lh-media-grid__background" src="./images/bgs/plant-02-small.webp" alt="">
-
         <div class="lh-media-grid__inner">
-          <div class="lh-media-grid__column lh-media-grid__column--left">
-            <div class="lh-media-grid__item">
-              <img src="./images/stock/02.webp" alt="Meeting room view">
+          <div class="lh-motion-line" data-scroll-motion="1" data-x-start="0" data-x-end="0" data-y-start="-20" data-y-end="0" data-appear-at="0" data-appear-by="0.3" data-animate-opacity="0" data-disable-below="800" data-start-vh="0.85" data-end-vh="0.35">
+            <div class="lh-media-grid__column">
+              <div class="lh-media-grid__item">
+                <img src="./images/stock/02.webp" alt="Meeting room view">
+              </div>
             </div>
           </div>
-
-          <div class="lh-media-grid__column lh-media-grid__column--center">
-            <div class="lh-media-grid__item">
-              <img src="./images/heros/09.webp" alt="Office environment">
+          <div class="lh-motion-line" data-scroll-motion="1" data-x-start="0" data-x-end="0" data-y-start="0" data-y-end="0" data-appear-at="0" data-appear-by="0.3" data-animate-opacity="0" data-disable-below="800" data-start-vh="0.85" data-end-vh="0.35">
+            <div class="lh-media-grid__column">
+              <div class="lh-media-grid__item">
+                <img src="./images/heros/09.webp" alt="Office environment">
+              </div>
             </div>
           </div>
-
-          <div class="lh-media-grid__column lh-media-grid__column--right">
-            <div class="lh-media-grid__item">
-              <img src="./images/stock/21.webp" alt="Workspace details">
-            </div>
-            <div class="lh-media-grid__item">
-              <img src="./images/stock/06.webp" alt="Office seating">
+          <div class="lh-motion-line" data-scroll-motion="1" data-x-start="0" data-x-end="0" data-y-start="-200" data-y-end="0" data-appear-at="0" data-appear-by="0.3" data-animate-opacity="0" data-disable-below="800" data-start-vh="0.85" data-end-vh="0.35">
+            <div class="lh-media-grid__column">
+              <div class="lh-media-grid__item">
+                <img src="./images/stock/21.webp" alt="Workspace details">
+              </div>
+              <div class="lh-media-grid__item">
+                <img src="./images/stock/06.webp" alt="Office seating">
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- quote -->
       <section class="lh-quote">
         <div class="lh-quote__inner">
-          <h2>Why choose Lambourne House?</h2>
-          <p>Lambourne House offers a variety of spaces including flexible offices, coworking areas, meeting rooms, conference facilities and event spaces, but also boasts a variety of unique features and amenities designed to support you, your business or event.</p>
-          <a class="lh-section-link" href="#more">More about us &rarr;</a>
+          <div class="lh-motion-line" data-scroll-motion="1" data-x-start="0" data-x-end="0" data-y-start="6.5" data-y-end="0" data-appear-at="0" data-appear-by="0.25" data-animate-opacity="1" data-disable-below="800" data-start-vh="0.85" data-end-vh="0.35">
+            <h2>Why choose Lambourne House?</h2>
+          </div>
+          <div class="lh-motion-line" data-scroll-motion="1" data-x-start="0" data-x-end="0" data-y-start="6.5" data-y-end="0" data-appear-at="0.2" data-appear-by="0.2" data-animate-opacity="1" data-disable-below="800" data-start-vh="0.85" data-end-vh="0.35">
+            <p>Lambourne House offers a variety of spaces including flexible offices, coworking areas, meeting rooms, conference facilities and event spaces, but also boasts a variety of unique features and amenities designed to support you, your business or event.</p>
+          </div>
+          <div class="lh-motion-line" data-scroll-motion="1" data-x-start="0" data-x-end="0" data-y-start="6.5" data-y-end="0" data-appear-at="0.3" data-appear-by="0.3" data-animate-opacity="1" data-disable-below="800" data-start-vh="0.85" data-end-vh="0.35">
+            <a class="lh-section-link" href="#more">More about us &rarr;</a>
+          </div>
         </div>
       </section>
 
-      <!-- step-events -->
       <section class="lh-step lh-step--left">
         <img class="lh-step__background lh-step__background--right" src="./images/bgs/plant-03-small.webp" alt="">
         <div class="lh-step__image" style="background-image:url('./images/heros/09.webp');" aria-hidden="true"></div>
@@ -128,7 +141,6 @@
         </div>
       </section>
 
-      <!-- step-coworking -->
       <section class="lh-step lh-step--right" id="coworking">
         <div class="lh-step__image" style="background-image:url('./images/heros/04.webp');" aria-hidden="true"></div>
         <div class="lh-step__content">
@@ -139,8 +151,7 @@
         </div>
       </section>
 
-      <!-- marquee-suites -->
-      <section class="lh-marquee" style="--speed:80s;--card-width:320px;--image-height:550px;--gap:20px;--section-pad-y:50px;--section-bg:transparent;">
+      <section class="lh-marquee lh-marquee--background lh-marquee--text-over-bottom is-continuous no-radius" style="--speed:80s;--card-width:320px;--image-height:550px;--gap:20px;--section-pad-y:50px;--section-bg:transparent;">
         <div class="lh-marquee__viewport">
           <div class="lh-marquee__track">
             <a class="lh-marquee__card" href="#"><div class="lh-marquee__media" style="background-image:url('./images/heros/01.webp');"><div class="lh-marquee__overlay"><span class="lh-marquee__label">Pearl Suite</span><span class="lh-marquee__link">Book it now</span></div></div></a>
@@ -150,7 +161,6 @@
             <a class="lh-marquee__card" href="#"><div class="lh-marquee__media" style="background-image:url('./images/heros/05.webp');"><div class="lh-marquee__overlay"><span class="lh-marquee__label">Foundry Room</span><span class="lh-marquee__link">Book it now</span></div></div></a>
             <a class="lh-marquee__card" href="#"><div class="lh-marquee__media" style="background-image:url('./images/heros/06.webp');"><div class="lh-marquee__overlay"><span class="lh-marquee__label">Harlech Suite</span><span class="lh-marquee__link">Book it now</span></div></div></a>
             <a class="lh-marquee__card" href="#"><div class="lh-marquee__media" style="background-image:url('./images/heros/07.webp');"><div class="lh-marquee__overlay"><span class="lh-marquee__label">Millennium</span><span class="lh-marquee__link">Book it now</span></div></div></a>
-
             <a class="lh-marquee__card" href="#"><div class="lh-marquee__media" style="background-image:url('./images/heros/01.webp');"><div class="lh-marquee__overlay"><span class="lh-marquee__label">Pearl Suite</span><span class="lh-marquee__link">Book it now</span></div></div></a>
             <a class="lh-marquee__card" href="#"><div class="lh-marquee__media" style="background-image:url('./images/heros/02.webp');"><div class="lh-marquee__overlay"><span class="lh-marquee__label">Foundry Room</span><span class="lh-marquee__link">Book it now</span></div></div></a>
             <a class="lh-marquee__card" href="#"><div class="lh-marquee__media" style="background-image:url('./images/heros/03.webp');"><div class="lh-marquee__overlay"><span class="lh-marquee__label">Harlech Suite</span><span class="lh-marquee__link">Book it now</span></div></div></a>
@@ -162,8 +172,7 @@
         </div>
       </section>
 
-      <!-- marquee-icons -->
-      <section class="lh-marquee" style="--speed:50s;--card-width:120px;--image-height:50px;--gap:20px;--section-pad-y:12px;--section-bg:transparent;">
+      <section class="lh-marquee lh-marquee--image lh-marquee--text-below is-continuous no-radius" style="--speed:50s;--card-width:120px;--image-height:50px;--gap:20px;--section-pad-y:12px;--section-bg:transparent;">
         <div class="lh-marquee__viewport">
           <div class="lh-marquee__track">
             <div class="lh-marquee__card"><img class="lh-marquee__image" src="./icons/AirConditioning.svg" alt="Air Conditioning"><div class="lh-marquee__below"><span class="lh-marquee__label">Air Conditioning</span></div></div>
@@ -186,7 +195,6 @@
             <div class="lh-marquee__card"><img class="lh-marquee__image" src="./icons/SolarPanels.svg" alt="Solar Panels"><div class="lh-marquee__below"><span class="lh-marquee__label">Solar Panels</span></div></div>
             <div class="lh-marquee__card"><img class="lh-marquee__image" src="./icons/SupportStaff.svg" alt="Support Staff"><div class="lh-marquee__below"><span class="lh-marquee__label">Support Staff</span></div></div>
             <div class="lh-marquee__card"><img class="lh-marquee__image" src="./icons/WellnessRoom.svg" alt="Wellness Room"><div class="lh-marquee__below"><span class="lh-marquee__label">Wellness Room</span></div></div>
-
             <div class="lh-marquee__card"><img class="lh-marquee__image" src="./icons/AirConditioning.svg" alt="Air Conditioning"><div class="lh-marquee__below"><span class="lh-marquee__label">Air Conditioning</span></div></div>
             <div class="lh-marquee__card"><img class="lh-marquee__image" src="./icons/AudioVisualTech.svg" alt="AudioVisual Tech"><div class="lh-marquee__below"><span class="lh-marquee__label">AudioVisual Tech</span></div></div>
             <div class="lh-marquee__card"><img class="lh-marquee__image" src="./icons/BikeStorage.svg" alt="Bike Storage"><div class="lh-marquee__below"><span class="lh-marquee__label">Bike Storage</span></div></div>
@@ -212,14 +220,12 @@
       </section>
     </main>
 
-    <!-- site-footer -->
     <footer class="lh-site-footer">
       <div class="lh-site-footer__main">
         <div class="lh-site-footer__inner">
           <a class="lh-site-footer__logo" href="./index.html">
             <img src="./images/branding/lh-logo.svg" alt="Lambourne House">
           </a>
-
           <div class="lh-site-footer__columns">
             <div class="lh-site-footer__column">
               <h2>A collaborative space for the everyday</h2>
@@ -228,13 +234,11 @@
                 <a class="lh-site-footer__button is-secondary" href="https://new-directions.officernd.com/tours/locations" target="_blank" rel="noreferrer noopener">Book a tour</a>
               </div>
             </div>
-
             <div class="lh-site-footer__column is-right">
               <p class="lh-site-footer__intro">Contact us now at the below:</p>
               <p class="lh-site-footer__line">Email: <a href="mailto:enquiries@lambourne.house?swcfpc=1">enquiries@lambourne.house</a></p>
               <p class="lh-site-footer__line">Call: <a href="tel:02920827550">029 2082 7550</a></p>
               <p class="lh-site-footer__line">Lambourne House, Lambourne Crescent, Cardiff CF14 5GL</p>
-
               <ul class="lh-site-footer__socials" aria-label="Social links">
                 <li><a href="https://www.instagram.com/lambourne.house?swcfpc=1" aria-label="Instagram">IG</a></li>
                 <li><a href="https://www.linkedin.com/company/lambourne-house?swcfpc=1" aria-label="LinkedIn">LI</a></li>
@@ -242,14 +246,12 @@
               </ul>
             </div>
           </div>
-
           <div class="lh-site-footer__legal">
             <p><a href="https://www.new-directions.co.uk/privacy-policy/" target="_blank" rel="noreferrer noopener">Privacy Policy</a></p>
             <p><a href="https://www.new-directions.co.uk/wp-content/uploads/modern-slavery-statement.pdf" target="_blank" rel="noreferrer noopener">Modern Slavery Statement</a></p>
           </div>
         </div>
       </div>
-
       <div class="lh-site-footer__bottom">
         <p>&copy; 2026 All rights reserved. A part of the New Directions Group. <a href="https://www.new-directions.co.uk/" target="_blank" rel="noreferrer noopener">Visit site</a></p>
       </div>
