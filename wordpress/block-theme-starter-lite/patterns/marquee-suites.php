@@ -1,0 +1,73 @@
+<?php
+/**
+ * Title: Lambourne Marquee Suites
+ * Slug: lambourne-house-block-starter/marquee-suites
+ * Inserter: no
+ */
+?>
+<!-- wp:html -->
+<section class="lh-marquee lh-marquee--background lh-marquee--text-over-bottom is-continuous no-radius" style="--speed:80s;--card-width:320px;--image-height:550px;--gap:20px;--section-pad-y:50px;--section-bg:transparent;">
+  <div class="lh-marquee__viewport">
+    <div class="lh-marquee__track">
+      <?php for ($i = 0; $i < 2; $i++) : ?>
+        <a class="lh-marquee__card" href="#">
+          <div class="lh-marquee__media" style="background-image:url('<?php echo esc_url(get_theme_file_uri('assets/images/heros/01.webp')); ?>');">
+            <div class="lh-marquee__overlay">
+              <span class="lh-marquee__label">Pearl Suite</span>
+              <span class="lh-marquee__link">Book it now</span>
+            </div>
+          </div>
+        </a>
+        <a class="lh-marquee__card" href="#">
+          <div class="lh-marquee__media" style="background-image:url('<?php echo esc_url(get_theme_file_uri('assets/images/heros/02.webp')); ?>');">
+            <div class="lh-marquee__overlay">
+              <span class="lh-marquee__label">Foundry Room</span>
+              <span class="lh-marquee__link">Book it now</span>
+            </div>
+          </div>
+        </a>
+        <a class="lh-marquee__card" href="#">
+          <div class="lh-marquee__media" style="background-image:url('<?php echo esc_url(get_theme_file_uri('assets/images/heros/03.webp')); ?>');">
+            <div class="lh-marquee__overlay">
+              <span class="lh-marquee__label">Harlech Suite</span>
+              <span class="lh-marquee__link">Book it now</span>
+            </div>
+          </div>
+        </a>
+        <a class="lh-marquee__card" href="#">
+          <div class="lh-marquee__media" style="background-image:url('<?php echo esc_url(get_theme_file_uri('assets/images/heros/04.webp')); ?>');">
+            <div class="lh-marquee__overlay">
+              <span class="lh-marquee__label">Millennium</span>
+              <span class="lh-marquee__link">Book it now</span>
+            </div>
+          </div>
+        </a>
+        <a class="lh-marquee__card" href="#">
+          <div class="lh-marquee__media" style="background-image:url('<?php echo esc_url(get_theme_file_uri('assets/images/heros/05.webp')); ?>');">
+            <div class="lh-marquee__overlay">
+              <span class="lh-marquee__label">Foundry Room</span>
+              <span class="lh-marquee__link">Book it now</span>
+            </div>
+          </div>
+        </a>
+        <a class="lh-marquee__card" href="#">
+          <div class="lh-marquee__media" style="background-image:url('<?php echo esc_url(get_theme_file_uri('assets/images/heros/06.webp')); ?>');">
+            <div class="lh-marquee__overlay">
+              <span class="lh-marquee__label">Harlech Suite</span>
+              <span class="lh-marquee__link">Book it now</span>
+            </div>
+          </div>
+        </a>
+        <a class="lh-marquee__card" href="#">
+          <div class="lh-marquee__media" style="background-image:url('<?php echo esc_url(get_theme_file_uri('assets/images/heros/07.webp')); ?>');">
+            <div class="lh-marquee__overlay">
+              <span class="lh-marquee__label">Millennium</span>
+              <span class="lh-marquee__link">Book it now</span>
+            </div>
+          </div>
+        </a>
+      <?php endfor; ?>
+    </div>
+  </div>
+</section>
+<!-- /wp:html -->

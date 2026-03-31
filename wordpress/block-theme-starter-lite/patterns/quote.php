@@ -1,0 +1,24 @@
+<?php
+/**
+ * Title: Lambourne Quote
+ * Slug: lambourne-house-block-starter/quote
+ * Inserter: no
+ */
+?>
+<!-- wp:html -->
+<section class="lh-quote">
+  <div class="lh-quote__inner">
+    <div class="lh-motion-line" data-scroll-motion="1" data-x-start="0" data-x-end="0" data-y-start="6.5" data-y-end="0" data-appear-at="0" data-appear-by="0.25" data-animate-opacity="1" data-disable-below="800" data-start-vh="0.85" data-end-vh="0.35">
+      <h2>Why choose Lambourne House?</h2>
+    </div>
+
+    <div class="lh-motion-line" data-scroll-motion="1" data-x-start="0" data-x-end="0" data-y-start="6.5" data-y-end="0" data-appear-at="0.2" data-appear-by="0.2" data-animate-opacity="1" data-disable-below="800" data-start-vh="0.85" data-end-vh="0.35">
+      <p>Lambourne House offers a variety of spaces including flexible offices, coworking areas, meeting rooms, conference facilities and event spaces, but also boasts a variety of unique features and amenities designed to support you, your business or event.</p>
+    </div>
+
+    <div class="lh-motion-line" data-scroll-motion="1" data-x-start="0" data-x-end="0" data-y-start="6.5" data-y-end="0" data-appear-at="0.3" data-appear-by="0.3" data-animate-opacity="1" data-disable-below="800" data-start-vh="0.85" data-end-vh="0.35">
+      <a class="lh-section-link" href="#more">More about us &rarr;</a>
+    </div>
+  </div>
+</section>
+<!-- /wp:html -->
